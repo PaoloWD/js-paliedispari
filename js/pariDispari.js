@@ -10,21 +10,27 @@ console.log("numero scelto", numChois);
 const randomNumInt = parseInt(randomNum());
 console.log("numero casuale", randomNumInt);
 let resultAdd = numChois + randomNumInt;
-alert("la somma è: " + resultAdd);
 console.log("la somma è:", resultAdd);
 if (numEO(resultAdd) == true) {
-  alert("il numero è pari");
   if (choiseEO == "pari") {
-    alert("il giocatore ha vinto");
+    alert(
+      "la somma è: " + resultAdd + " il numero è pari il giocatore ha vinto"
+    );
   } else {
-    alert("il computer ha vinto");
+    alert(
+      "la somma è: " + resultAdd + " il numero è dispari il computer ha vinto"
+    );
   }
 } else {
   alert("il numero è dispari");
   if (choiseEO == "dispari") {
-    alert("il giocatore ha vinto");
+    alert(
+      "la somma è: " + resultAdd + " il numero è dispari il giocatore ha vinto"
+    );
   } else {
-    alert("il computer ha vinto");
+    alert(
+      "la somma è: " + resultAdd + " il numero è pari il computer ha vinto"
+    );
   }
 }
 

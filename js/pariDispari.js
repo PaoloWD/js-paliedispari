@@ -11,27 +11,14 @@ const randomNumInt = parseInt(randomNum());
 console.log("numero casuale", randomNumInt);
 let resultAdd = numChois + randomNumInt;
 console.log("la somma è:", resultAdd);
-if (numEO(resultAdd) == true) {
-  if (choiseEO == "pari") {
-    alert(
-      "la somma è: " + resultAdd + " il numero è pari il giocatore ha vinto"
-    );
-  } else {
-    alert(
-      "la somma è: " + resultAdd + " il numero è dispari il computer ha vinto"
-    );
-  }
+resultfunc = numEO();
+if (
+  (choiseEO === "pari" && resultfunc === true) ||
+  (choiseEO === "dispari" && resultfunc === false)
+) {
+  console.log("hai vinto");
 } else {
-  alert("il numero è dispari");
-  if (choiseEO == "dispari") {
-    alert(
-      "la somma è: " + resultAdd + " il numero è dispari il giocatore ha vinto"
-    );
-  } else {
-    alert(
-      "la somma è: " + resultAdd + " il numero è pari il computer ha vinto"
-    );
-  }
+  console.log("hai perso");
 }
 
 function randomNum(min, max) {
@@ -41,7 +28,11 @@ function randomNum(min, max) {
 }
 
 function numEO(number) {
-  if (number % 2 == 0) {
+  if (resultAdd % 2 == 0) {
+    console.log("il risultato è pari");
     return true;
+  } else {
+    console.log("il risultato è dispari");
+    return false;
   }
 }

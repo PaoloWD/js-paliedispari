@@ -10,7 +10,7 @@ console.log("numero scelto", numChois);
 const randomNumInt = parseInt(randomNum());
 console.log("numero casuale", randomNumInt);
 let resultAdd = numChois + randomNumInt;
-console.log(resultAdd);
+console.log("la somma è:", resultAdd);
 if (numEO(resultAdd) == true) {
   alert("il numero è pari");
   if (choiseEO == "pari") {

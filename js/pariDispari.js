@@ -27,7 +27,7 @@ function randomNum(min, max) {
   return Math.floor(Math.random() * (1 + max - min)) + min;
 }
 
-function numEO(number) {
+function numEO() {
   if (resultAdd % 2 == 0) {
     console.log("il risultato è pari");
     return true;

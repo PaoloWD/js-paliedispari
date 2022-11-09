@@ -11,7 +11,7 @@ const randomNumInt = parseInt(randomNum());
 console.log("numero casuale", randomNumInt);
 let resultAdd = numChois + randomNumInt;
 console.log("la somma è:", resultAdd);
-resultfunc = numEO();
+resultfunc = numEO(resultAdd);
 if (
   (choiseEO === "pari" && resultfunc === true) ||
   (choiseEO === "dispari" && resultfunc === false)
@@ -27,8 +27,8 @@ function randomNum(min, max) {
   return Math.floor(Math.random() * (1 + max - min)) + min;
 }
 
-function numEO() {
-  if (resultAdd % 2 == 0) {
+function numEO(num) {
+  if (num % 2 == 0) {
     console.log("il risultato è pari");
     return true;
   } else {
